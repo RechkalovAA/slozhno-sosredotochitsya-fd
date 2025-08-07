@@ -2,6 +2,10 @@
   const theme = localStorage.getItem('theme');
   if (theme) {
     setTheme(theme);
+  } else {
+    const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    setTheme('auto');
+    applySystemTheme();
   }
 })();
 
@@ -19,7 +23,13 @@ document.addEventListener('DOMContentLoaded', () => {
       const chosenTheme = [...button.classList]
         .find((cn) => cn.includes('_type_'))
         .split('_type_')[1];
-      setTheme(chosenTheme);
+      
+      if (chosenTheme === 'auto') {
+        setTheme('auto');
+        applySystemTheme();
+      } else {
+        setTheme(chosenTheme);
+      }
       setActiveButton(themeButtons, chosenTheme);
     });
   });
@@ -29,6 +39,12 @@ function setTheme(theme) {
   document.documentElement.className = '';
   document.documentElement.classList.add(`theme-${theme}`);
   localStorage.setItem('theme', theme);
+}
+
+function applySystemTheme() {
+  const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.classList.remove('theme-light', 'theme-dark');
+  document.documentElement.classList.add(`theme-${systemTheme}`);
 }
 
 function setActiveButton(buttonsArray, theme) {
@@ -50,3 +66,10 @@ function setActiveButton(buttonsArray, theme) {
     autoButton.setAttribute('disabled', true);
   }
 }
+
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+  const currentTheme = localStorage.getItem('theme');
+  if (currentTheme === 'auto') {
+    applySystemTheme();
+  }
+});

@@ -1,4 +1,41 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
+:root {
+  --background-image: url("../images/cover-image.png");
+  --accent-color: #ff0070;
+  --text-color: #000;
+  --title-color: #ff0070;
+  --decor-bg-color: #ff0070;
+  --title-shadow-color: #ff0070;
+  --main-bg-color: #000028;
+  --content-text-color: #000;
+  --advice-text-color: #000;
+  --section-title-color: #ff0070;
+  --button-color: #ff0070;
+}
+
+:root.theme-dark {
+  --background-image: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --text-color: #db00ff;
+  --title-color: #ff0070;
+  --decor-bg-color: #ff0070;
+  --title-shadow-color: #ff0070;
+  --main-bg-color: #000028;
+  --content-text-color: #f1b2ce;
+  --advice-text-color: #000028;
+  --section-title-color: #ff0070;
+  --button-color: #ff0070;
+}
+
+:root.theme-light {
+  --background-image: url("../images/cover-image-light.png");
+  --accent-color: #000;
+  --text-color: #000;
+  --title-color: #ffc2e6;
+  --decor-bg-color: #ff8dcb;
+  --title-shadow-color: #ff8dcb;
+  --main-bg-color: #fff1f7;
+  --content-text-color: #353430;
+  --advice-text-color: #353430;
+  --section-title-color: #353430;
+  --button-color: #353430;
+}
