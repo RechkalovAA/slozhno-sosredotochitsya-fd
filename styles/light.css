@@ -1,58 +1,28 @@
-.theme-light .header__rec {
-  display: none;
-}
-
 :root.theme-light {
   --corner-color: #000;
   --corner-circle-color: #000;
   --corner-circle-shadow: 0 0 4px 2px #000;
-}
-
-.theme-light .decor-corner::before,
-.theme-light .decor-corner_bottom-left::before {
-  border-color: var(--corner-color);
+  --background-image: url("../images/cover-image-light.png");
+  --accent-color: #000;
+  --text-color: #000;
+  --title-color: #ffc2e6;
+  --decor-bg-color: #ff8dcb;
+  --title-shadow-color: #ff8dcb;
+  --main-bg-color: #fff1f7;
+  --content-text-color: #353430;
+  --advice-text-color: #353430;
+  --section-title-color: #353430;
+  --card-title-color: #353430;
+  --button-color: #353430;
+  --hover-button-border-color: #32312d66;
+  --focus-button-border-color: #353430;
+  --active-button-border-color: #353430;
 }
 
 .theme-light .decor-corner_top-right::after {
-  background-color: var(--corner-circle-color);
-  box-shadow: var(--corner-circle-shadow);
   display: none;
 }
 
-.theme-light .section__title {
-  color: #000;
-}
-
-.theme-light .card__title {
-  background-color: var(--decor-bg-color);
-  color: #000;
-}
-
-/* Кнопки для светлой темы */
-.theme-light .header__theme-menu-button {
-  color: var(--button-color);
-}
-
-.theme-light .header__theme-menu-button:hover {
-  border-color: color-mix(in srgb, var(--button-color) 40%, transparent);
-}
-
-.theme-light .header__theme-menu-button_active {
-  border-color: var(--button-color);
-}
-
-.theme-light .header__theme-menu-button:focus-visible {
-  outline: none;
-}
-
-.theme-light .header__theme-menu-button:focus {
-  text-decoration: underline;
-  text-decoration-color: var(--button-color);
-  text-underline-offset: 4px;
-  border-color: transparent;
-}
-
-.theme-light .header__theme-menu-button:focus:hover {
-  text-decoration: none;
-  border-color: color-mix(in srgb, var(--button-color) 40%, transparent);
+.theme-light .header__rec {
+  display: none;
 }

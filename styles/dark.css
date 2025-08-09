@@ -2,78 +2,19 @@
   --corner-color: #ff0070;
   --corner-circle-color: #ff0070;
   --corner-circle-shadow: 0 0 4px 2px #ff0070;
-}
-
-.theme-dark .decor-corner::before,
-.theme-dark .decor-corner_bottom-left::before {
-  border-color: var(--corner-color);
-}
-
-.theme-dark .decor-corner_top-right::after {
-  background-color: var(--corner-circle-color);
-  box-shadow: var(--corner-circle-shadow);
-}
-
-.theme-dark .card__title {
-  background-color: var(--decor-bg-color);
-  color: #000;
-  width: 355px;
-
-  display: flex;
-  align-items: center;
-  padding: 0 0px;
-  box-sizing: border-box;
-}
-
-.header__rec-text {
-  font-family: "IBM Plex Mono", monospace;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 18px;
-  line-height: 25px;
-  color: #ff0070;
-  text-transform: uppercase;
-}
-
-@media (min-width: 768px) {
-  .theme-dark .header__theme-menu-button {
-    background-color: transparent;
-    color: var(--button-color);
-    border: 1px solid transparent;
-    transition: border-color 0.3s ease;
-  }
-
-  .theme-dark .header__theme-menu-button_active {
-    border-color: var(--button-color);
-    pointer-events: none;
-  }
-
-  .theme-dark .header__theme-menu-button:hover {
-    border-color: color-mix(in srgb, var(--button-color) 40%, transparent);
-  }
-
-  .theme-dark .header__theme-menu-button:focus-visible {
-    outline: none;
-  }
-
-  .theme-dark .header__theme-menu-button:focus {
-    text-decoration: underline;
-    text-decoration-color: var(--button-color);
-    text-underline-offset: 4px;
-    border-color: transparent;
-  }
-
-  .theme-dark .header__theme-menu-button:focus:hover {
-    text-decoration: none;
-    border-color: color-mix(in srgb, var(--button-color) 40%, transparent);
-  }
-
-  .header__theme-menu-list {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
+  --background-image: url("../images/cover-image-dark.png");
+  --accent-color: #ff0070;
+  --text-color: #db00ff;
+  --title-color: #db00ff;
+  --decor-bg-color: #ff0070;
+  --title-shadow-color: #ff0070;
+  --main-bg-color: #000028;
+  --content-text-color: #f1b2ce;
+  --advice-text-color: #000028;
+  --section-title-color: #ff0070;
+  --card-title-color: #000028;
+  --button-color: #ff0070;
+  --hover-button-border-color: #ff007066;
+  --focus-button-border-color: #ff0070;
+  --active-button-border-color: #ff0070;
 }

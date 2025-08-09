@@ -8,7 +8,7 @@
     <title>Сложно сосредоточиться</title>
     <script src="./scripts/script.js"></script>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
-    <link rel="icon" type="image/svg+xml" href="./images/icon.svg">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg">
     <link
       rel="apple-touch-icon"
       type="image/png"
@@ -23,17 +23,41 @@
   </head>
   <body class="page">
     <header class="header">
-      <div class="header__rec" aria-hidden="true">
-        <span class="header__rec-text">rec</span>
-      </div> 
-      <div class="decor-corner decor-corner_top-right" aria-hidden="true"></div>
-      <div class="decor-corner decor-corner_bottom-left" aria-hidden="true"></div> 
-      <div class="header__content">
-        <h1 class="header__title title-decor">
-          <span class="header__title-line">no</span>
-          <span class="header__title-line">focus</span>
-        </h1>
-       
+      <div class="header__top-menu">
+        <div class="header__rec" aria-hidden="true">rec</div>
+        <nav class="header__theme-menu">
+          <ul class="header__theme-menu-list">
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_light"
+              >
+                день
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
+                disabled
+              >
+                авто
+              </button>
+            </li>
+            <li class="header__theme-menu-item">
+              <button
+                class="header__theme-menu-button header__theme-menu-button_type_dark"
+              >
+                неон
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="header__center-title">
+        <h1 class="header__title title-decor">no focus</h1>
+      </div>
+
+      <div class="header__bottom-advice">
         <div class="header__advice">
           <p class="header__advice-text">
             Что делать, когда не можешь делать ничего<br>
@@ -42,41 +66,17 @@
           </p>
         </div>
       </div>
-      <nav class="header__theme-menu">
-        <ul class="header__theme-menu-list">
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_light"
-            >
-              день
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_active header__theme-menu-button_type_auto"
-              disabled
-            >
-              авто
-            </button>
-          </li>
-          <li class="header__theme-menu-item">
-            <button
-              class="header__theme-menu-button header__theme-menu-button_type_dark"
-            >
-              неон
-            </button>
-          </li>
-        </ul>
-      </nav>
+
+      <div class="decor-corner decor-corner_top-right" aria-hidden="true"></div>
+      <div
+        class="decor-corner decor-corner_bottom-left"
+        aria-hidden="true"
+      ></div>
     </header>
 
-   
     <main class="main">
-      
-      <section class="section section-1">
+      <section class="section section-intro">
         <h2 class="section__title">Почему сосредоточиться так сложно</h2>
-
-        <!-- Первая карточка с информацией -->
         <article class="card">
           <h3 class="card__title title-decor">Многозадачность</h3>
           <p class="card__text">
@@ -84,11 +84,16 @@
             важные. Где же легендарная многозадачность, когда она так нужна вам
             (и всем нанимающим менеджерам этого мира)? А дело в том, что её
             просто не существует. Исследователи
-            <a href="#" class="card__link">выяснили</a>, что мозгу тяжело
-            концентрироваться даже на двух делах одновременно. А когда в поле
-            внимания попадает несколько важных задач, организм паникует и
-            выделяет кортизол и адреналин — «гормоны стресса». Из-за этого мы
-            работаем невнимательно: ошибаемся и быстро устаём.
+            <a
+              href="https://dana.org/article/multicosts-of-multitasking/"
+              class="card__link"
+              target="_blank"
+              >выяснили</a
+            >, что мозгу тяжело концентрироваться даже на двух делах
+            одновременно. А когда в поле внимания попадает несколько важных
+            задач, организм паникует и выделяет кортизол и адреналин — «гормоны
+            стресса». Из-за этого мы работаем невнимательно: ошибаемся и быстро
+            устаём.
           </p>
         </article>
 
@@ -107,10 +112,9 @@
         </article>
       </section>
 
-      
-      <section class="section section-2">
+      <section class="section section-problems">
         <h2 class="section__title">Что снижает концентрацию внимания?</h2>
-        
+
         <article class="card">
           <h3 class="card__title title-decor">Многозадачность</h3>
           <p class="card__text">
@@ -121,6 +125,9 @@
             — невозможно. Концентрация — мышца, и она может не выдержать, если
             не давать ей отдохнуть.
           </p>
+        </article>
+
+        <article class="card">
           <h3 class="card__title title-decor">Еда</h3>
           <p class="card__text">
             «Быстрые углеводы» — сахар, белый хлеб, сладости — молниеносно
@@ -130,6 +137,9 @@
             заканчивается, мы чувствуем усталость и сонливость. И хотим ещё
             больше быстрых углеводов.
           </p>
+        </article>
+
+        <article class="card">
           <h3 class="card__title title-decor">Гаджеты</h3>
           <p class="card__text">
             Да-да, это та самая ситуация, когда на экране ноутбука — код, в
@@ -143,13 +153,12 @@
         </article>
       </section>
 
-      
-      <section class="section section-3">
+      <section class="section section-solutions">
         <h2 class="section__title">
           Как концентрироваться лучше, чем золотая рыбка (то есть дольше трёх
           секунд)
         </h2>
-        
+
         <article class="card">
           <h3 class="card__title title-decor">
             5 простых (на самом деле не очень) советов
@@ -175,12 +184,16 @@
           <h4 class="card__title title-decor">Прогуляйтесь</h4>
           <p class="card__text">
             Или даже пробегитесь. Лучше найти парк или лес: один эксперимент
-            <a href="#" class="card__link">показал</a>, что созерцание природы
-            повышает концентрацию, в то время как после просмотра городских
-            пейзажей она наоборот понижается. Можно совместить прогулку с
-            физическими упражнениями или бегом — так в мозг поступит ещё больше
-            кислорода и он будет лучше работать. Но и простая двадцатиминутная
-            прогулка — тоже отличный вариант.
+            <a
+              href="https://www.sciencedirect.com/science/article/abs/pii/S0272494415000328"
+              class="card__link"
+              target="_blank"
+              >показал</a
+            >, что созерцание природы повышает концентрацию, в то время как
+            после просмотра городских пейзажей она наоборот понижается. Можно
+            совместить прогулку с физическими упражнениями или бегом — так в
+            мозг поступит ещё больше кислорода и он будет лучше работать. Но и
+            простая двадцатиминутная прогулка — тоже отличный вариант.
           </p>
           <h4 class="card__title title-decor">Хорошо ешьте</h4>
           <p class="card__text">
@@ -199,8 +212,7 @@
         </article>
       </section>
 
-      
-      <section class="section section-4">
+      <section class="section section-gallery">
         <h3 class="card__title title-decor">А можно в картинках?</h3>
         <div class="gallery">
           <img
@@ -232,17 +244,18 @@
       </section>
     </main>
 
-    
     <footer class="footer">
       <div class="footer__inner">
-        
-        <div class="decor-corner decor-corner_top-right" aria-hidden="true"></div>
-        <div class="decor-corner decor-corner_bottom-left" aria-hidden="true"></div>
+        <div
+          class="decor-corner decor-corner_top-right"
+          aria-hidden="true"
+        ></div>
+        <div
+          class="decor-corner decor-corner_bottom-left"
+          aria-hidden="true"
+        ></div>
 
-        
-        <h2 class="footer__title title-decor">
-          <span class="footer__title-line">focus</span>
-        </h2>
+        <h2 class="footer__title title-decor">focus</h2>
       </div>
     </footer>
   </body>
