@@ -93,12 +93,7 @@
   height: 100%;
 }
 
-.header__bottom-advice {
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-bottom: 66px;
-}
+
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
@@ -114,22 +109,24 @@
   justify-self: center;
 }
 
-.header__advice {
-  z-index: 2;
-  background-color: transparent;
-  margin: 0 10px;
-  max-width: 364px;
-}
+
 
 .header__advice-text {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  z-index: 2;
+  background-color: var(--decor-bg-color);
+  margin: 0 10px 66px 10px;
+  max-width: 364px;
   font-weight: 700;
   font-style: normal;
   font-size: 18px;
   line-height: 23.4px;
   text-align: left;
-  margin: 0;
-  display: inline-block;
-  background-color: var(--decor-bg-color);
+  padding: 0px;
+  width: fit-content;
+  box-sizing: border-box;
   color: var(--advice-text-color);
 }
 
@@ -410,7 +407,7 @@ h4.card__title {
 
   .header__title {
     padding-left: 0px;
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
   .header__content {
@@ -420,15 +417,12 @@ h4.card__title {
     height: 100%;
   }
 
-  .header__advice {
+  .header__advice-text {
     max-width: 364px;
     margin-left: 0;
     align-self: flex-end;
     margin-right: 20px;
-    margin-bottom: 115px;
-  }
-
-  .header__advice-text {
+    margin-bottom: 185px;
     margin-top: 45px;
   }
 
@@ -667,8 +661,6 @@ h4.card__title {
     align-items: center;
     justify-content: center;
   }
-}
-
 .header__content {
   margin-top: 318px;
 }
@@ -689,13 +681,6 @@ h4.card__title {
   margin-top: 275px;
 }
 
-.header__advice {
-  align-self: flex-end;
-  margin: 114px 20px 134px auto;
-  width: auto;
-  max-width: 491px;
-}
-
 .header__advice-text {
   width: auto;
   word-wrap: break-word;
@@ -704,6 +689,10 @@ h4.card__title {
   display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
+  align-self: flex-end;
+  margin: 114px 20px 134px auto;
+  max-width: 491px;
+  min-height: 70px;
 }
 
 .main {
@@ -896,4 +885,5 @@ h4.card__title {
 .header__rec {
   top: 20px;
   right: 50px;
+}
 }
