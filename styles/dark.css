@@ -1,4 +1,5 @@
 :root.theme-dark {
+  /* Дублируем только те переменные, которые меняются между темами */
   --corner-color: #ff0070;
   --corner-circle-color: #ff0070;
   --corner-circle-shadow: 0 0 4px 2px #ff0070;

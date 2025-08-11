@@ -1,13 +1,21 @@
 :root {
-  --background-image: url("../images/cover-image.png");
+  /* Переменные тёмной темы по умолчанию */
+  --corner-color: #ff0070;
+  --corner-circle-color: #ff0070;
+  --corner-circle-shadow: 0 0 4px 2px #ff0070;
+  --background-image: url("../images/cover-image-dark.png");
   --accent-color: #ff0070;
-  --text-color: #000;
-  --title-color: #ff0070;
+  --text-color: #db00ff;
+  --title-color: #db00ff;
   --decor-bg-color: #ff0070;
   --title-shadow-color: #ff0070;
   --main-bg-color: #000028;
-  --content-text-color: #000;
-  --advice-text-color: #000;
+  --content-text-color: #f1b2ce;
+  --advice-text-color: #000028;
   --section-title-color: #ff0070;
+  --card-title-color: #000028;
   --button-color: #ff0070;
+  --hover-button-border-color: #ff007066;
+  --focus-button-border-color: #ff0070;
+  --active-button-border-color: #ff0070;
 }

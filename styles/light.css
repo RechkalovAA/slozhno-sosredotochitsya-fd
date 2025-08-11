@@ -1,4 +1,5 @@
 :root.theme-light {
+  /* Переменные, значения которых отличаются от тёмной темы */
   --corner-color: #000;
   --corner-circle-color: #000;
   --corner-circle-shadow: 0 0 4px 2px #000;
@@ -19,10 +20,44 @@
   --active-button-border-color: #353430;
 }
 
+/* Остальные стили, только при необходимости */
 .theme-light .decor-corner_top-right::after {
   display: none;
 }
 
 .theme-light .header__rec {
   display: none;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем только те же переменные, что и выше */
+    --corner-color: #000;
+    --corner-circle-color: #000;
+    --corner-circle-shadow: 0 0 4px 2px #000;
+    --background-image: url("../images/cover-image-light.png");
+    --accent-color: #000;
+    --text-color: #000;
+    --title-color: #ffc2e6;
+    --decor-bg-color: #ff8dcb;
+    --title-shadow-color: #ff8dcb;
+    --main-bg-color: #fff1f7;
+    --content-text-color: #353430;
+    --advice-text-color: #353430;
+    --section-title-color: #353430;
+    --card-title-color: #353430;
+    --button-color: #353430;
+    --hover-button-border-color: #32312d66;
+    --focus-button-border-color: #353430;
+    --active-button-border-color: #353430;
+  }
+
+  /* Остальные стили, только при необходимости */
+  .theme-light .decor-corner_top-right::after {
+    display: none;
+  }
+  
+  .theme-light .header__rec {
+    display: none;
+  }
 }
