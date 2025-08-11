@@ -53,11 +53,11 @@
   }
 
   /* Остальные стили, только при необходимости */
-  .theme-light .decor-corner_top-right::after {
+  .decor-corner_top-right::after {
     display: none;
   }
-  
-  .theme-light .header__rec {
+
+  .header__rec {
     display: none;
   }
 }

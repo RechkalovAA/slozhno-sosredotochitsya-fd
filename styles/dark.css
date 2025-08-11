@@ -19,3 +19,12 @@
   --focus-button-border-color: #ff0070;
   --active-button-border-color: #ff0070;
 }
+
+/* Остальные стили, только при необходимости */
+.theme-dark .decor-corner_top-right::after {
+  display: block;
+}
+
+.theme-dark .header__rec {
+  display: flex;
+}
